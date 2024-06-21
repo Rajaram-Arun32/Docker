@@ -1,5 +1,7 @@
 FROM openjdk:17
+RUN mkdir arunfolder && cd arunfolder
+ADD https://github.com/Rajaram-Arun32/Docker.git  .
+WORKDIR arunfolder
 EXPOSE 8080
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
 ENTRYPOINT ["java","-jar","spring-boot-docker.jar"]
 
